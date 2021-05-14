@@ -1,9 +1,9 @@
-const createError = require('http-errors');
 const express = require('express');
-const logger = require('morgan');
 const routes = require('./routes')
 
 const app = express();
+const PORT = 3000;
+
 app.use(routes)
 
-app.listen(3000, () => console.info(`server started on port ${3000} (${'env'})`));
+app.listen(PORT, () => console.info(`server started on port ${PORT}`));
