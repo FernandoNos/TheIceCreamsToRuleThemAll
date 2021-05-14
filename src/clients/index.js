@@ -1,0 +1,1 @@
+module.exports.yelpFusionClient = require('./yelp-fusion.client')

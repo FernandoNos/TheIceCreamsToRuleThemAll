@@ -1,0 +1,1 @@
+module.exports.ShopsService = require('./shops.service')
