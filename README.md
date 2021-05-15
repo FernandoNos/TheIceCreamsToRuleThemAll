@@ -9,7 +9,7 @@ This application was developed with the following stack:
 * NodeJS: 14.16.1
 * NPM: 6.14.12
 * JavaScript
-* Axios: 0.21.1
+* axios: 0.21.1
 * express: 4.17.1
 * lodash: 4.17.21
 * nodemon: 2.0.7
