@@ -20,7 +20,7 @@ You can start by downloading the code in this repository and, once you're done, 
 
 1. Open your terminal and execute `npm start` under the project root directory;
 2. Open your browser and access the endpoint: `http://localhost:3000/api/v1/shops?location=Alpharetta&term=ice-cream&sort_by=rating&limit=5`;
-3. You should get a a JSON response containing the 5 top ice creams spots in Alpharetta, as reported by Yelp Fusion;
+3. You should get a a JSON response containing the 5 top ice creams spots in Alpharetta, as reported by Yelp Fusion (you can see a sample response towards the end) ;
 
 # Why is it not hardcoded to only look up the ones in Alpharetta?
 
