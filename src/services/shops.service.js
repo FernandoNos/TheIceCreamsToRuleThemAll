@@ -3,7 +3,7 @@ const _ = require('lodash')
 const NotFoundException = require("../exceptions/not-found.exception");
 const { BusinessSearchResponseDTO } = require("../dto/business-search-response.dto");
 
-module.exports.searchBusinesses = async ( search ) => {
+module.exports.searchBusinessesWithReviews = async (search ) => {
     const searchBusinessesResponse = await yelpFusionClient.searchBusinesses(search)
     if(_.isEmpty(searchBusinessesResponse?.businesses)) throw new NotFoundException(`No businesses found!`)
     return retrieveBusinessReviews(searchBusinessesResponse.businesses)

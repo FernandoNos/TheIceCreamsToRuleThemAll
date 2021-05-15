@@ -18,7 +18,7 @@ module.exports.get = async (request, response) => {
         */
         if(!limit) request.query.limit = 10
 
-        const foundBusinesses = await ShopsService.searchBusinesses(request.query)
+        const foundBusinesses = await ShopsService.searchBusinessesWithReviews(request.query)
         response.send(foundBusinesses)
     }catch(error){
         console.error(`Error getting businesses with ${request.params} - ${error.message} ${error.stack}`)
