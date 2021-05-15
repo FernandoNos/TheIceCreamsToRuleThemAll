@@ -3,7 +3,8 @@ const { ShopsService } = require('../services')
 
 module.exports.get = async (request, response) => {
     try {
-        const {  latitude, longitude, location, limit } = request.query
+        const query = request.query
+        const {  latitude, longitude, location, limit, offset } = query
 
         /*
         Since we depend on the Yelp service, and thees fields are mandatory,
@@ -16,9 +17,10 @@ module.exports.get = async (request, response) => {
         If not provided, limiting at 10, as the Yelp service blocks all requests
         after a certain number is reached
         */
-        if(!limit) request.query.limit = 10
+        if(!limit) query.limit = 10
+        if(!offset) query.offset = 0
 
-        const foundBusinesses = await ShopsService.searchBusinessesWithReviews(request.query)
+        const foundBusinesses = await ShopsService.searchBusinessesWithReviews(query)
         response.send(foundBusinesses)
     }catch(error){
         console.error(`Error getting businesses with ${request.params} - ${error.message} ${error.stack}`)
