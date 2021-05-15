@@ -27,6 +27,8 @@ You can start by downloading the code in this repository and, once you're done, 
 This was decided to give whoever is consuming this API the flexbility to choose what is being looked up. 
 If I were to develop the whole flow, I would put another layer between the front-end and this service, so that all the client specific needs could be developed in it.
 
+The API Key was kept hardcoded, but it would make more sense to have it in a configuration server / secret manager.
+
 # Response Sample
 
 Request: `http://localhost:3000/api/v1/shops?location=Alpharetta&term=ice-cream&sort_by=rating&limit=5`
