@@ -18,6 +18,9 @@ module.exports.get = async (request, response) => {
         after a certain number is reached
         */
         if(!limit) query.limit = 10
+        /*
+        Included offset because the yelp function was not returning 5 when limit = 5, once offset was added, it worked as expected
+         */
         if(!offset) query.offset = 0
 
         const foundBusinesses = await ShopsService.searchBusinessesWithReviews(query)
